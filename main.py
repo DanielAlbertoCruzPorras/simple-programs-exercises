@@ -1,3 +1,3 @@
-centimetros = float(input("Ingrese longitud: "))
+num = int(str(input("Ingrese un entero de tres digitos: "))[::-1])
 
-print(f"{centimetros:.2f} cm = {centimetros/2.54:.4f} in")
+print(f"{num:.0f}")
