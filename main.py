@@ -1,6 +1,3 @@
-firstNote = float(input("Primer nota: "))
-secondNote = float(input("Segunda nota: "))
-tirdNote = float(input("Tercer nota: "))
-fourthNote = float(input("Cuarta nota: "))
+centimetros = float(input("Ingrese longitud: "))
 
-print(f"Promedio: {(firstNote+secondNote+tirdNote+fourthNote)/4:.2f}")
+print(f"{centimetros:.2f} cm = {centimetros/2.54:.4f} in")
