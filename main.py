@@ -1,2 +1,6 @@
-radio = float(input("Ingrese el radio: "))
-print(f"Área: {2*3.14159*radio:.1f} \nPerimetro: {radio*radio*3.14159:.1f}")
+firstNote = float(input("Primer nota: "))
+secondNote = float(input("Segunda nota: "))
+tirdNote = float(input("Tercer nota: "))
+fourthNote = float(input("Cuarta nota: "))
+
+print(f"Promedio: {(firstNote+secondNote+tirdNote+fourthNote)/4:.2f}")
