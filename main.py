@@ -1,3 +1,5 @@
-num = int(str(input("Ingrese un entero de tres digitos: "))[::-1])
+import math
+a = float(input("Ingrese cateto a: "))
+b = float(input("Ingrese cateto b: "))
 
-print(f"{num:.0f}")
+print(f"La hipotenusa es {math.sqrt(a**2 + b**2):.16f}")
