@@ -1,5 +1,2 @@
-num = float(input("Ingrese un número: "))
-
-decimal_part = num - int(num)
-
-print(f"{decimal_part:.6f}")
+numero = float(input("Enter a number: "))
+print(f"decimal_part: {numero % 1:.6f}")
