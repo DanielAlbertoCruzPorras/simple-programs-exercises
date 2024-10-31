@@ -1,16 +1,9 @@
-year = int(input("Insert a year: "))
-if year < 1582:
-    if year % 4 == 0:
-        print("That year is a leap year")
-    else:
-        print("That year is'nt a leap year")
-elif year % 4 == 0:
-    if year % 100 == 0:
-        if year % 400 == 0:
-            print("That year is a leap year")
-        else:
-            print("That year is'nt a leap year")
-    else:
-        print("That year is a leap year")
+dividend = float(input("Insert the dividend: "))
+divisor = float(input("Insert the divisor: "))
+div = dividend/divisor
+quot = div - (div % 1)
+rest = (div % 1)* divisor
+if div % 1 == 0:
+    print(f"the division is exact\nQuotient: {quot:.0f}\nRest: {rest:.0f}")
 else:
-    print("That year is'nt a leap year")
+    print(f"the division is not exact\nQuotient: {quot:.0f}\nRest: {rest:.0f}")
