@@ -1,2 +1,10 @@
-numero = float(input("Enter a number: "))
-print(f"decimal_part: {numero % 1:.6f}")
+b = 1
+while b == 1:
+    num = int(input("Inserte un número par mayor a 10: "))
+    if num > 10:
+        if num % 2 == 0:
+            b = 0
+        else:
+            print("El número es mayor que 10 pero es impar, inserte otro número que cumpla las condiciones")
+    else:
+        print("El número es menor a 10, inserte otro que cumpla las condiciones")
