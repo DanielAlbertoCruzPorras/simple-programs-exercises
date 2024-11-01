@@ -1,17 +1,22 @@
-# Get the lengths of the triangle's sides
-a = float(input("Enter side a: "))
-b = float(input("Enter side b: "))
-c = float(input("Enter side c: "))
+# Get user inputs
+height = float(input("Enter height in meters: "))
+weight = float(input("Enter weight in kilograms: "))
+age = int(input("Enter age in years: "))
 
-# Check if the sides satisfy the triangle inequality
-if (a + b > c) and (a + c > b) and (b + c > a):
-    # Determine the type of triangle
-    if a == b == c:
-        print("The triangle is equilateral.")
-    elif a == b or b == c or a == c:
-        print("The triangle is isosceles.")
+# Calculate BMI
+bmi = weight / (height ** 2)
+
+# Determine risk level based on age and BMI
+if age < 45:
+    if bmi < 22.0:
+        risk = "low"
     else:
-        print("The triangle is scalene.")
+        risk = "medium"
 else:
-    print("It is not a valid triangle.")
+    if bmi < 22.0:
+        risk = "medium"
+    else:
+        risk = "high"
+
+print(f"Your risk level is {risk}.")
 
