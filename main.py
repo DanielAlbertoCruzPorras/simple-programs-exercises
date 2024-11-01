@@ -6,7 +6,6 @@ current_day = current_time.tm_mday
 current_month = current_time.tm_mon
 current_year = current_time.tm_year
 
-# Get user input
 day_of_birth = int(input("Enter your day of birth: "))
 month_of_birth = int(input("Enter your month of birth: "))
 year_of_birth = int(input("Enter your year of birth: "))
