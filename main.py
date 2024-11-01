@@ -1,29 +1,14 @@
-num1 = float(input("Insert a number: "))
-num2 = float(input("Insert a number: "))
+character = input("Enter a character: ")
 
-if num1>num2:
-    print(f"{num2} {num1}")
+if character.isdigit():
+    print("It is a number.")
+elif character.isalpha():
+    if character.isupper():
+        print("It is an uppercase letter.")
+    else:
+        print("It is a lowercase letter.")
 else:
-    print(f"{num1} {num2}")
-
-num1 = float(input("Insert a number: "))
-num2 = float(input("Insert a number: "))
-num3 = float(input("Insert a number: "))
-numeros = [num1, num2, num3]
-numeros.sort()
-
-print(*numeros) #Imprime sin corchetes ni comas (Recuerde que es una tupla)
- 
-#Ordenar cuatro números flotantes
-num1 = float(input("Insert a number: "))
-num2 = float(input("Insert a number: "))
-num3 = float(input("Insert a number: "))
-num4 = float(input("Insert a number: "))
-
-numeros = [num1, num2, num3, num4]
-numeros.sort()
-
-print(*numeros)
+    print("It is neither a letter nor a number.")
 
 
 
