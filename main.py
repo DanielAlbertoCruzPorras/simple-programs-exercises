@@ -1,14 +1,22 @@
-character = input("Enter a character: ")
+operand1 = float(input("Enter operand: "))
+operator = input("Enter operator (+, -, *, /): ")
+operand2 = float(input("Enter operand: "))
 
-if character.isdigit():
-    print("It is a number.")
-elif character.isalpha():
-    if character.isupper():
-        print("It is an uppercase letter.")
+if operator == '+':
+    result = operand1 + operand2
+    print(f"{operand1} + {operand2} = {result}")
+elif operator == '-':
+    result = operand1 - operand2
+    print(f"{operand1} - {operand2} = {result}")
+elif operator == '*':
+    result = operand1 * operand2
+    print(f"{operand1} * {operand2} = {result}")
+elif operator == '/':
+    if operand2 != 0:
+        result = operand1 / operand2
+        print(f"{operand1} / {operand2} = {result}")
     else:
-        print("It is a lowercase letter.")
+        print("Error: Division by zero is not allowed.")
 else:
-    print("It is neither a letter nor a number.")
-
-
+    print("Error: Invalid operator.")
 
