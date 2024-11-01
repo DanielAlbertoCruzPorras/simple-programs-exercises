@@ -1,22 +1,22 @@
-operand1 = float(input("Enter operand: "))
-operator = input("Enter operator (+, -, *, /): ")
-operand2 = float(input("Enter operand: "))
+from time import localtime
 
-if operator == '+':
-    result = operand1 + operand2
-    print(f"{operand1} + {operand2} = {result}")
-elif operator == '-':
-    result = operand1 - operand2
-    print(f"{operand1} - {operand2} = {result}")
-elif operator == '*':
-    result = operand1 * operand2
-    print(f"{operand1} * {operand2} = {result}")
-elif operator == '/':
-    if operand2 != 0:
-        result = operand1 / operand2
-        print(f"{operand1} / {operand2} = {result}")
-    else:
-        print("Error: Division by zero is not allowed.")
-else:
-    print("Error: Invalid operator.")
+# Get current date
+current_time = localtime()
+current_day = current_time.tm_mday
+current_month = current_time.tm_mon
+current_year = current_time.tm_year
+
+# Get user input
+day_of_birth = int(input("Enter your day of birth: "))
+month_of_birth = int(input("Enter your month of birth: "))
+year_of_birth = int(input("Enter your year of birth: "))
+
+# Calculate initial age difference
+age = current_year - year_of_birth
+
+# Check if the birthday has already passed this year
+if (month_of_birth > current_month) or (month_of_birth == current_month and day_of_birth > current_day):
+    age -= 1
+
+print(f"You are {age} years old.")
 
